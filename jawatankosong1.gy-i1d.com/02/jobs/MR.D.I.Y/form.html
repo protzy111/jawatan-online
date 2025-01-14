@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pengisian Biodata</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Latar belakang hitam */
+            color: #fff; /* Teks berwarna putih */
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background-color: #333; /* Warna latar belakang kolom formulir */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            margin-top: 20px;
+        }
+        header {
+            background: #ff6600; /* Warna oranye */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid #ff6600; /* Garis bawah oranye */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        form {
+            background: #222; /* Latar belakang formulir */
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ff6600; /* Warna label oranye */
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #444; /* Warna border abu-abu gelap */
+            border-radius: 4px;
+            background: #555; /* Warna latar belakang input */
+            color: #fff; /* Teks input putih */
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .form-group button {
+            background-color: #ff6600; /* Warna tombol oranye */
+            color: #fff; /* Teks tombol putih */
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .form-group button:hover {
+            background-color: #e55a00; /* Warna tombol oranye lebih gelap saat hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Borang Pendaftaran</h1>
+        </div>
+    </header>
+    <div class="container">
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nama">Nama Penuh:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="no-ic">Nombor Kad Pengenalan:</label>
+                <input type="text" id="no-ic" name="no-ic" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Emel:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="tarikh-lahir">Tarikh Lahir:</label>
+                <input type="date" id="tarikh-lahir" name="tarikh-lahir" required>
+            </div>
+            <div class="form-group">
+                <label for="jantina">Jantina:</label>
+                <select id="jantina" name="jantina" required>
+                    <option value="lelaki">Lelaki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="telefon">Nombor Telifon:</label>
+                <input type="tel" id="telefon" name="telefon" required>
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" name="alamat" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Hantar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

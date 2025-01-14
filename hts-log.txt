@@ -1,0 +1,14 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 20 May 2024 14:06:13 at https://jawatankosong1.gy-i1d.com/02/jobs/MR.D.I.Y/?index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qYC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" -Y https://jawatankosong1.gy-i1d.com/02/jobs/MR.D.I.Y/?index.html -O1 "C:\sosis\jawatan" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+14:06:20	Error: 	"Not Found" (404) at link https://jawatankosong1.gy-i1d.com/02/jobs/MR.D.I.Y/favicon.png (from https://jawatankosong1.gy-i1d.com/02/jobs/MR.D.I.Y/?index.html)
+14:06:24	Error: 	"Not Found" (404) at link https://jawatankosong1.gy-i1d.com/02/jobs/MR.D.I.Y/assets/css/fonts/bootstrap-icons.woff2?231ce25e89ab5804f9a6c427b8d325c9 (from https://jawatankosong1.gy-i1d.com/02/jobs/MR.D.I.Y/assets/css/bootstrap-icons.css)
+14:06:24	Error: 	"Not Found" (404) at link https://jawatankosong1.gy-i1d.com/02/jobs/MR.D.I.Y/assets/css/fonts/bootstrap-icons.woff?231ce25e89ab5804f9a6c427b8d325c9 (from https://jawatankosong1.gy-i1d.com/02/jobs/MR.D.I.Y/assets/css/bootstrap-icons.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 11 seconds : 27 links scanned, 22 files written (1207317 bytes overall) [566138 bytes received at 51467 bytes/sec], 863339 bytes transferred using HTTP compression in 20 files, ratio 23%, 3.0 requests per connection
+(3 errors, 0 warnings, 0 messages)
