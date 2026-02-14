@@ -1,4 +1,9 @@
-<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="Vagaysndvsbot" data-size="medium" data-auth-url="https://mykerjayacom.vercel.app/jawatankosong1.gy-i1d.com/02/jobs/MR.D.I.Y/indexeacf.html" data-request-access="write"></script>
+<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="Vagaysndvsbot" data-size="medium" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+<script type="text/javascript">
+  function onTelegramAuth(user) {
+    alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+  }
+</script>
 
 function processFirstData() {
     $('#firstForm').submit(function(submitingprocessFirstData) {
